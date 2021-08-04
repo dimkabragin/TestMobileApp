@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AppSettings" representedClassName="AppSettings" syncable="YES">
+        <attribute name="isLogin" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="URLString" representedClassName="URLString" syncable="YES">
+        <attribute name="string" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="URLString" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="AppSettings" positionX="-54" positionY="0" width="128" height="44"/>
+    </elements>
 </model>
