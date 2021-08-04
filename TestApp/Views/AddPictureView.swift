@@ -10,6 +10,7 @@ import URLImage
 
 struct AddPictureView: View {
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var presentationMode
     @State var url = ""
     
     var body: some View {
@@ -29,6 +30,7 @@ struct AddPictureView: View {
                     urlString.string = self.url
                     do {
                         try self.moc.save()
+                        self.presentationMode.wrappedValue.dismiss()
                     } catch {
                         print ("ойой \(error.localizedDescription)")
                     }

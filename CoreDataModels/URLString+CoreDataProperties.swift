@@ -19,7 +19,3 @@ extension URLString {
     @NSManaged public var string: String
 
 }
-
-extension URLString : Identifiable {
-
-}

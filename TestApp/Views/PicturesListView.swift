@@ -10,25 +10,25 @@ import URLImage
 
 struct PicturesListView: View {
     @Environment(\.managedObjectContext) var moc
-    //@FetchRequest(entity: URLString.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \URLString.string, ascending: true)])
-    
-    //var pictureList: FetchRequest<URLString>
+    @FetchRequest(entity: URLString.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \URLString.string, ascending: true)]) var pictureList: FetchedResults<URLString>
     
     @State private var isShowingAddView = false
     
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination:
-                                URLImage(URL(string: "https://i.ytimg.com/vi/jg8ixdQzrjc/maxresdefault.jpg")!) { image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                }) {
-                    URLImage(URL(string: "https://i.ytimg.com/vi/jg8ixdQzrjc/maxresdefault.jpg")!) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
+                ForEach (pictureList, id: \.self) { pic in
+                    NavigationLink(destination:
+                                    URLImage(URL(string: pic.string)!) { image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                    }) {
+                        URLImage(URL(string: pic.string)!) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
                     }
                 }
             }
