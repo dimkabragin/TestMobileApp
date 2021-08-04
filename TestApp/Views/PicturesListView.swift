@@ -10,36 +10,37 @@ import URLImage
 
 struct PicturesListView: View {
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var presentationMode
     @FetchRequest(entity: URLString.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \URLString.string, ascending: true)]) var pictureList: FetchedResults<URLString>
     
     @State private var isShowingAddView = false
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach (pictureList, id: \.self) { pic in
-                    NavigationLink(destination:
-                                    URLImage(URL(string: pic.string)!) { image in
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                    }) {
-                        URLImage(URL(string: pic.string)!) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }
+        List {
+            ForEach (pictureList, id: \.self) { pic in
+                NavigationLink(destination: ShowImageView(imageUrl: pic)) {
+                    URLImage(URL(string: pic.string)!) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                     }
                 }
             }
-            .navigationBarTitle("Изображеньки")
-            .navigationBarItems(trailing: Button ("Добавить") {
-                self.isShowingAddView.toggle()
-            })
-            .sheet(isPresented: $isShowingAddView) {
-                AddPictureView().environment(\.managedObjectContext, self.moc)
-            }
         }
+        .navigationBarTitle("Изображеньки")
+        .navigationBarItems(
+            leading: Button ("Выйти") {
+                UserDefaults.standard.setValue(false, forKey: "isLogin")
+                self.presentationMode.wrappedValue.dismiss()
+        },
+            trailing: Button ("Добавить") {
+            self.isShowingAddView.toggle()
+        })
+        .navigationBarBackButtonHidden(true)
+        .sheet(isPresented: $isShowingAddView) {
+            AddPictureView().environment(\.managedObjectContext, self.moc)
+        }
+        
     }
 }
 
