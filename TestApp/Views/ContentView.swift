@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var moc
     @State var phone: String = ""
     @State var code: String = ""
     
@@ -78,8 +79,6 @@ struct ContentView: View {
                 
                 // Тут, конечно, знатный говнокод, если останется время лучше переделать это чтобы каждый контрол отвечал за свой контент, тогда не потребуется тысяча вложенных if. Но за неимением времени пока оставлю так. Если будет время - поправлю чтобы было повкуснее
                 
-                
-                
                 Button(action: {
                     isButtonDisabled.toggle()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -97,6 +96,7 @@ struct ContentView: View {
                                 if (code == "1111") {
                                     self.navigated = true
                                     UserDefaults.standard.set(true, forKey: "isLogin")
+                                    
                                     //скидываем состояние к заводским
                                     code = ""
                                     phone = ""

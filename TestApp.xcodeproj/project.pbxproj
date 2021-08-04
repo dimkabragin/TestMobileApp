@@ -16,10 +16,10 @@
 		420A9CB226B99F3E0038559E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420A9CB026B99F3E0038559E /* LaunchScreen.storyboard */; };
 		420A9CC526BA33340038559E /* PicturesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CC426BA33340038559E /* PicturesListView.swift */; };
 		420A9CCB26BA38C80038559E /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 420A9CCA26BA38C80038559E /* URLImage */; };
-		420A9CD326BA45920038559E /* URLString+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CCF26BA45920038559E /* URLString+CoreDataClass.swift */; };
-		420A9CD426BA45920038559E /* URLString+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CD026BA45920038559E /* URLString+CoreDataProperties.swift */; };
 		420A9CD826BA483C0038559E /* AddPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CD726BA483C0038559E /* AddPictureView.swift */; };
 		420A9CDD26BA83670038559E /* ShowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CDC26BA83670038559E /* ShowImageView.swift */; };
+		420A9CE826BAEA5C0038559E /* URLString+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CE626BAEA5C0038559E /* URLString+CoreDataClass.swift */; };
+		420A9CE926BAEA5C0038559E /* URLString+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CE726BAEA5C0038559E /* URLString+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +33,10 @@
 		420A9CB126B99F3E0038559E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		420A9CB326B99F3E0038559E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		420A9CC426BA33340038559E /* PicturesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesListView.swift; sourceTree = "<group>"; };
-		420A9CCF26BA45920038559E /* URLString+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLString+CoreDataClass.swift"; sourceTree = "<group>"; };
-		420A9CD026BA45920038559E /* URLString+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLString+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		420A9CD726BA483C0038559E /* AddPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPictureView.swift; sourceTree = "<group>"; };
 		420A9CDC26BA83670038559E /* ShowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageView.swift; sourceTree = "<group>"; };
+		420A9CE626BAEA5C0038559E /* URLString+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLString+CoreDataClass.swift"; sourceTree = "<group>"; };
+		420A9CE726BAEA5C0038559E /* URLString+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLString+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 		420A9CD626BA459E0038559E /* CoreDataModels */ = {
 			isa = PBXGroup;
 			children = (
-				420A9CCF26BA45920038559E /* URLString+CoreDataClass.swift */,
-				420A9CD026BA45920038559E /* URLString+CoreDataProperties.swift */,
+				420A9CE626BAEA5C0038559E /* URLString+CoreDataClass.swift */,
+				420A9CE726BAEA5C0038559E /* URLString+CoreDataProperties.swift */,
 			);
 			path = CoreDataModels;
 			sourceTree = "<group>";
@@ -190,11 +190,11 @@
 				420A9CD826BA483C0038559E /* AddPictureView.swift in Sources */,
 				420A9CA326B99F370038559E /* AppDelegate.swift in Sources */,
 				420A9CC526BA33340038559E /* PicturesListView.swift in Sources */,
-				420A9CD426BA45920038559E /* URLString+CoreDataProperties.swift in Sources */,
+				420A9CE826BAEA5C0038559E /* URLString+CoreDataClass.swift in Sources */,
 				420A9CDD26BA83670038559E /* ShowImageView.swift in Sources */,
+				420A9CE926BAEA5C0038559E /* URLString+CoreDataProperties.swift in Sources */,
 				420A9CAA26B99F370038559E /* TestApp.xcdatamodeld in Sources */,
 				420A9CA526B99F370038559E /* SceneDelegate.swift in Sources */,
-				420A9CD326BA45920038559E /* URLString+CoreDataClass.swift in Sources */,
 				420A9CA726B99F370038559E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
