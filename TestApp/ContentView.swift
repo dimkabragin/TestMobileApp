@@ -11,10 +11,16 @@ struct ContentView: View {
     @State var phone: String = ""
     @State var code: String = ""
     
+    // Тут делаем константу с изначальным значением таймера, чтобы было проще работать
+    let timeValue = 6
+    @State var timeRemaining = 6
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     @State var isCodeFieldShowing = false
     @State var isButtonDisabled = false
     @State var isFalsePhoneState = false
     @State var isFalseCodeState = false
+    @State var isTimerTextUpdate = false
     
     var body: some View {
         VStack {
@@ -31,9 +37,28 @@ struct ContentView: View {
             )
             .padding(.horizontal)
             
-            // Также нужно еще реализовать сюда таймер для обратного отсчета для повторного запроса кода.
-            
             if isCodeFieldShowing {
+                Button(action: {
+                    if (timeRemaining == 0) {
+                        isTimerTextUpdate.toggle()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            timeRemaining = timeValue
+                            isTimerTextUpdate.toggle()
+                        }
+                    }
+                }) {
+                    Text(self.timeRemaining > 0 ? "Повторить запрос кода через \(timeRemaining)" : "Повторить запрос")
+                }
+                .foregroundColor(self.timeRemaining > 0 || isTimerTextUpdate ? Color.gray : Color.blue)
+                .font(Font.caption)
+                .onReceive(timer) { time in
+                    if self.isCodeFieldShowing == true &&
+                        self.timeRemaining > 0 {
+                        self.timeRemaining -= 1
+                    }
+                }
+                .disabled(timeRemaining > 0 || isTimerTextUpdate)
+                
                 HStack {
                     SecureField ("Введите код из смс", text: $code)
                         .foregroundColor(.black)
@@ -74,6 +99,7 @@ struct ContentView: View {
                         }
                         else {
                             code = ""
+                            timeRemaining = timeValue
                             isCodeFieldShowing = false
                             isFalsePhoneState = true
                         }
