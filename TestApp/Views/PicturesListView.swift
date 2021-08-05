@@ -78,9 +78,3 @@ struct PicturesListView: View {
         return str;
     }
 }
-
-struct PicturesListView_Previews: PreviewProvider {
-    static var previews: some View {
-        PicturesListView()
-    }
-}

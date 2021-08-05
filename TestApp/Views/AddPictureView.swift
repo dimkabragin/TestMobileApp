@@ -39,9 +39,3 @@ struct AddPictureView: View {
         }
     }
 }
-
-struct AddPictureView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddPictureView()
-    }
-}

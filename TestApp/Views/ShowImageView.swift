@@ -34,9 +34,3 @@ struct ShowImageView: View {
         .disabled(isDeleteEnabled)
     }
 }
-
-//struct ShowImageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ShowImageView()
-//    }
-//}
