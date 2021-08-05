@@ -12,16 +12,12 @@ struct ContentView: View {
     @State var phone: String = ""
     @State var code: String = ""
     
-    // Тут делаем константу с изначальным значением таймера, чтобы было проще работать
-    let timeValue = 60
-    @State var timeRemaining = 60
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     
     @State var isCodeFieldShowing = false
     @State var isButtonDisabled = false
     @State var isFalsePhoneState = false
     @State var isFalseCodeState = false
-    @State var isTimerTextUpdate = false
     @State var navigated = UserDefaults.standard.bool(forKey: "isLogin")
     
     var body: some View {
@@ -30,26 +26,8 @@ struct ContentView: View {
                 CustomTextField(label: "Введите номер телефона", isCorrect: isFalsePhoneState, text: $phone, isSecure: false)
                 
                 if isCodeFieldShowing {
-                    Button(action: {
-                        if (timeRemaining == 0) {
-                            isTimerTextUpdate.toggle()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                timeRemaining = timeValue
-                                isTimerTextUpdate.toggle()
-                            }
-                        }
-                    }) {
-                        Text(self.timeRemaining > 0 ? "Повторить запрос кода через \(timeRemaining)" : "Повторить запрос")
-                    }
-                    .foregroundColor(self.timeRemaining > 0 || isTimerTextUpdate ? Color.gray : Color.blue)
-                    .font(Font.caption)
-                    .onReceive(timer) { time in
-                        if self.isCodeFieldShowing == true &&
-                            self.timeRemaining > 0 {
-                            self.timeRemaining -= 1
-                        }
-                    }
-                    .disabled(timeRemaining > 0 || isTimerTextUpdate)
+                    
+                    TimerLabel(timerValue: 10)
                     
                     CustomTextField(label: "Введите код из смс", isCorrect: isFalseCodeState, text: $code, isSecure: true)
                 }
@@ -77,7 +55,6 @@ struct ContentView: View {
                                     //скидываем состояние к заводским
                                     code = ""
                                     phone = ""
-                                    timeRemaining = timeValue
                                     isCodeFieldShowing = false
                                     isFalseCodeState = false
                                 }
@@ -87,7 +64,6 @@ struct ContentView: View {
                             }
                             else {
                                 code = ""
-                                timeRemaining = timeValue
                                 isCodeFieldShowing = false
                                 isFalsePhoneState = true
                             }
