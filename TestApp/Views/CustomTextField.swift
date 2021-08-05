@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomTextField: View {
     @State var label: String
-    @State var isCorrect: Bool
+    @Binding var isCorrect: Bool
     @Binding var text: String
     @State var isSecure: Bool
     

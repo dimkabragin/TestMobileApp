@@ -23,13 +23,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack {
-                CustomTextField(label: "Введите номер телефона", isCorrect: isFalsePhoneState, text: $phone, isSecure: false)
+                CustomTextField(label: "Введите номер телефона", isCorrect: $isFalsePhoneState, text: $phone, isSecure: false)
                 
                 if isCodeFieldShowing {
                     
-                    TimerLabel(timerValue: 10)
+                    TimerLabel(timerValue: 60)
                     
-                    CustomTextField(label: "Введите код из смс", isCorrect: isFalseCodeState, text: $code, isSecure: true)
+                    CustomTextField(label: "Введите код из смс", isCorrect: $isFalseCodeState, text: $code, isSecure: true)
                 }
                 
                 // Тут, конечно, знатный говнокод, если останется время лучше переделать это чтобы каждый контрол отвечал за свой контент, тогда не потребуется тысяча вложенных if. Но за неимением времени пока оставлю так. Если будет время - поправлю чтобы было повкуснее
