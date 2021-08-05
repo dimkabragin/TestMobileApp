@@ -14,6 +14,7 @@ struct ShowImageView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var imageUrl: URLString
+    @State var isDeleteEnabled: Bool = false
     var body: some View {
         URLImage(URL(string: imageUrl.string) ?? URL(string: "https://pbs.twimg.com/media/Er_eAPzW4AEHLRR.png")!) { image in
             image
@@ -21,10 +22,16 @@ struct ShowImageView: View {
                 .aspectRatio(contentMode: .fit)
         }
         .navigationBarItems(trailing: Button ("Удалить") {
-            moc.delete(imageUrl)
-            try? moc.save()
-            self.presentationMode.wrappedValue.dismiss()
+            // Блокируем кнопку на пару секунд для имитации сетевого запроса
+            isDeleteEnabled.toggle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                moc.delete(imageUrl)
+                try? moc.save()
+                self.presentationMode.wrappedValue.dismiss()
+                isDeleteEnabled.toggle()
+            }
         })
+        .disabled(isDeleteEnabled)
     }
 }
 
