@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4209C5A926BC420D0054AAAE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5A826BC420D0054AAAE /* SplashScreenView.swift */; };
 		420A9CA326B99F370038559E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA226B99F370038559E /* AppDelegate.swift */; };
 		420A9CA526B99F370038559E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA426B99F370038559E /* SceneDelegate.swift */; };
 		420A9CA726B99F370038559E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA626B99F370038559E /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4209C5A826BC420D0054AAAE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		420A9C9F26B99F370038559E /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		420A9CA226B99F370038559E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		420A9CA426B99F370038559E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				420A9CD726BA483C0038559E /* AddPictureView.swift */,
 				420A9CF226BB7E9B0038559E /* CustomTextField.swift */,
 				420A9CF526BB82B80038559E /* TimerLabel.swift */,
+				4209C5A826BC420D0054AAAE /* SplashScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				420A9CF626BB82B80038559E /* TimerLabel.swift in Sources */,
 				420A9CA526B99F370038559E /* SceneDelegate.swift in Sources */,
 				420A9CA726B99F370038559E /* ContentView.swift in Sources */,
+				4209C5A926BC420D0054AAAE /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
