@@ -20,6 +20,7 @@
 		420A9CDD26BA83670038559E /* ShowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CDC26BA83670038559E /* ShowImageView.swift */; };
 		420A9CE826BAEA5C0038559E /* URLString+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CE626BAEA5C0038559E /* URLString+CoreDataClass.swift */; };
 		420A9CE926BAEA5C0038559E /* URLString+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CE726BAEA5C0038559E /* URLString+CoreDataProperties.swift */; };
+		420A9CF326BB7E9B0038559E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CF226BB7E9B0038559E /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		420A9CDC26BA83670038559E /* ShowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageView.swift; sourceTree = "<group>"; };
 		420A9CE626BAEA5C0038559E /* URLString+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLString+CoreDataClass.swift"; sourceTree = "<group>"; };
 		420A9CE726BAEA5C0038559E /* URLString+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLString+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		420A9CF226BB7E9B0038559E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				420A9CC426BA33340038559E /* PicturesListView.swift */,
 				420A9CDC26BA83670038559E /* ShowImageView.swift */,
 				420A9CD726BA483C0038559E /* AddPictureView.swift */,
+				420A9CF226BB7E9B0038559E /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				420A9CA326B99F370038559E /* AppDelegate.swift in Sources */,
 				420A9CC526BA33340038559E /* PicturesListView.swift in Sources */,
 				420A9CE826BAEA5C0038559E /* URLString+CoreDataClass.swift in Sources */,
+				420A9CF326BB7E9B0038559E /* CustomTextField.swift in Sources */,
 				420A9CDD26BA83670038559E /* ShowImageView.swift in Sources */,
 				420A9CE926BAEA5C0038559E /* URLString+CoreDataProperties.swift in Sources */,
 				420A9CAA26B99F370038559E /* TestApp.xcdatamodeld in Sources */,

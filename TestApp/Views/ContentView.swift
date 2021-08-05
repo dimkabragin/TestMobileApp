@@ -27,18 +27,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack {
-                HStack {
-                    TextField ("Введите номер телефона", text: $phone)
-                        .foregroundColor(.black)
-                        .padding()
-                }
-                .background(Color.white)
-                .cornerRadius(10)
-                .shadow(radius: 3)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10).stroke(isFalsePhoneState ? Color.red : Color.clear, lineWidth: 3)
-                )
-                .padding(.horizontal)
+                CustomTextField(label: "Введите номер телефона", isCorrect: isFalsePhoneState, text: $phone, isSecure: false)
                 
                 if isCodeFieldShowing {
                     Button(action: {
@@ -62,19 +51,7 @@ struct ContentView: View {
                     }
                     .disabled(timeRemaining > 0 || isTimerTextUpdate)
                     
-                    HStack {
-                        SecureField ("Введите код из смс", text: $code)
-                            .foregroundColor(.black)
-                            .padding()
-                    }
-                    
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .shadow(radius: 3)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10).stroke(isFalseCodeState ? Color.red : Color.clear, lineWidth: 3)
-                    )
-                    .padding()
+                    CustomTextField(label: "Введите код из смс", isCorrect: isFalseCodeState, text: $code, isSecure: true)
                 }
                 
                 // Тут, конечно, знатный говнокод, если останется время лучше переделать это чтобы каждый контрол отвечал за свой контент, тогда не потребуется тысяча вложенных if. Но за неимением времени пока оставлю так. Если будет время - поправлю чтобы было повкуснее
