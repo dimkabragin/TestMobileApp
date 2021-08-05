@@ -14,7 +14,11 @@ struct SplashScreenView: View {
     var body: some View {
         ZStack {
             
-            ContentView()
+            if UserDefaults.standard.bool(forKey: "isLogin") {
+                PicturesListView()
+            } else {
+                ContentView()
+            }
             
             ZStack {
                 Color("bg")
