@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4209C5A926BC420D0054AAAE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5A826BC420D0054AAAE /* SplashScreenView.swift */; };
+		4209C5BC26BD10760054AAAE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5BB26BD10760054AAAE /* LoginViewModel.swift */; };
 		420A9CA326B99F370038559E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA226B99F370038559E /* AppDelegate.swift */; };
 		420A9CA526B99F370038559E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA426B99F370038559E /* SceneDelegate.swift */; };
-		420A9CA726B99F370038559E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA626B99F370038559E /* ContentView.swift */; };
+		420A9CA726B99F370038559E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA626B99F370038559E /* LoginView.swift */; };
 		420A9CAA26B99F370038559E /* TestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA826B99F370038559E /* TestApp.xcdatamodeld */; };
 		420A9CAC26B99F3D0038559E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420A9CAB26B99F3D0038559E /* Assets.xcassets */; };
 		420A9CAF26B99F3D0038559E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420A9CAE26B99F3D0038559E /* Preview Assets.xcassets */; };
@@ -27,10 +28,11 @@
 
 /* Begin PBXFileReference section */
 		4209C5A826BC420D0054AAAE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		4209C5BB26BD10760054AAAE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		420A9C9F26B99F370038559E /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		420A9CA226B99F370038559E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		420A9CA426B99F370038559E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		420A9CA626B99F370038559E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		420A9CA626B99F370038559E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		420A9CA926B99F370038559E /* TestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestApp.xcdatamodel; sourceTree = "<group>"; };
 		420A9CAB26B99F3D0038559E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		420A9CAE26B99F3D0038559E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4209C5BA26BD0F880054AAAE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4209C5BB26BD10760054AAAE /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		420A9C9626B99F360038559E = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 		420A9CA126B99F370038559E /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				4209C5BA26BD0F880054AAAE /* ViewModels */,
 				420A9CC726BA33400038559E /* Views */,
 				420A9CA226B99F370038559E /* AppDelegate.swift */,
 				420A9CA426B99F370038559E /* SceneDelegate.swift */,
@@ -100,7 +111,7 @@
 		420A9CC726BA33400038559E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				420A9CA626B99F370038559E /* ContentView.swift */,
+				420A9CA626B99F370038559E /* LoginView.swift */,
 				420A9CC426BA33340038559E /* PicturesListView.swift */,
 				420A9CDC26BA83670038559E /* ShowImageView.swift */,
 				420A9CD726BA483C0038559E /* AddPictureView.swift */,
@@ -204,9 +215,10 @@
 				420A9CDD26BA83670038559E /* ShowImageView.swift in Sources */,
 				420A9CE926BAEA5C0038559E /* URLString+CoreDataProperties.swift in Sources */,
 				420A9CAA26B99F370038559E /* TestApp.xcdatamodeld in Sources */,
+				4209C5BC26BD10760054AAAE /* LoginViewModel.swift in Sources */,
 				420A9CF626BB82B80038559E /* TimerLabel.swift in Sources */,
 				420A9CA526B99F370038559E /* SceneDelegate.swift in Sources */,
-				420A9CA726B99F370038559E /* ContentView.swift in Sources */,
+				420A9CA726B99F370038559E /* LoginView.swift in Sources */,
 				4209C5A926BC420D0054AAAE /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
