@@ -22,12 +22,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack {
-                CustomTextField(label: "Введите номер телефона", isCorrect: $isFalsePhoneState, text: $phone, isSecure: false)
+                CustomTextField(label: "Телефон", isCorrect: $isFalsePhoneState, text: $phone, isSecure: false)
                 
                 if isCodeFieldShowing {
                     TimerLabel(timerValue: 60)
                     
-                    CustomTextField(label: "Введите код из смс", isCorrect: $isFalseCodeState, text: $code, isSecure: true)
+                    CustomTextField(label: "Код из смс", isCorrect: $isFalseCodeState, text: $code, isSecure: true)
                 }
                 
                 Button(action: {
@@ -84,6 +84,7 @@ struct ContentView: View {
                     code = ""
                     isCodeFieldShowing = false
                     isFalsePhoneState = true
+                    isFalseCodeState = false
                 }
             }
             isButtonDisabled.toggle()

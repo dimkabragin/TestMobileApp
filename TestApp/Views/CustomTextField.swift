@@ -19,10 +19,24 @@ struct CustomTextField: View {
                 SecureField (label, text: $text)
                     .foregroundColor(.black)
                     .padding()
+                if isCorrect {
+                    Text("Неверный код")
+                        .font(.footnote)
+                        .foregroundColor(Color.red)
+                        .padding()
+                }
             } else {
-                TextField (label, text: $text)
-                    .foregroundColor(.black)
-                    .padding()
+                HStack {
+                    TextField (label, text: $text)
+                        .foregroundColor(.black)
+                        .padding()
+                    if isCorrect {
+                        Text("Неверный номер")
+                            .font(.footnote)
+                            .foregroundColor(Color.red)
+                            .padding()
+                    }
+                }
             }
         }
         .background(Color.white)
