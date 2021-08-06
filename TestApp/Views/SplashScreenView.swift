@@ -15,9 +15,10 @@ struct SplashScreenView: View {
         ZStack {
             
             if UserDefaults.standard.bool(forKey: "isLogin") {
-                PicturesListView()
+                //PicturesListView()
+                PhoneEntryView()
             } else {
-                LoginView()
+                PhoneEntryView()
             }
             
             ZStack {

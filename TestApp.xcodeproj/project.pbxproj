@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4209C5A926BC420D0054AAAE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5A826BC420D0054AAAE /* SplashScreenView.swift */; };
 		4209C5BC26BD10760054AAAE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5BB26BD10760054AAAE /* LoginViewModel.swift */; };
+		4209C5C426BD68E90054AAAE /* PhoneEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5C326BD68E90054AAAE /* PhoneEntryView.swift */; };
+		4209C5C926BD6D560054AAAE /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5C826BD6D560054AAAE /* PhoneEntryViewModel.swift */; };
+		4209C5CD26BD742B0054AAAE /* PhoneNumTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5CC26BD742B0054AAAE /* PhoneNumTextField.swift */; };
+		4209C5D226BD79260054AAAE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5D126BD79260054AAAE /* StringExtensions.swift */; };
+		4209C5D626BD7A520054AAAE /* TapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209C5D526BD7A520054AAAE /* TapButton.swift */; };
 		420A9CA326B99F370038559E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA226B99F370038559E /* AppDelegate.swift */; };
 		420A9CA526B99F370038559E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA426B99F370038559E /* SceneDelegate.swift */; };
 		420A9CA726B99F370038559E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A9CA626B99F370038559E /* LoginView.swift */; };
@@ -29,6 +34,11 @@
 /* Begin PBXFileReference section */
 		4209C5A826BC420D0054AAAE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		4209C5BB26BD10760054AAAE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4209C5C326BD68E90054AAAE /* PhoneEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryView.swift; sourceTree = "<group>"; };
+		4209C5C826BD6D560054AAAE /* PhoneEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewModel.swift; sourceTree = "<group>"; };
+		4209C5CC26BD742B0054AAAE /* PhoneNumTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumTextField.swift; sourceTree = "<group>"; };
+		4209C5D126BD79260054AAAE /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		4209C5D526BD7A520054AAAE /* TapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapButton.swift; sourceTree = "<group>"; };
 		420A9C9F26B99F370038559E /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		420A9CA226B99F370038559E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		420A9CA426B99F370038559E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +72,36 @@
 		4209C5BA26BD0F880054AAAE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4209C5C726BD6D3B0054AAAE /* Login */,
 				4209C5BB26BD10760054AAAE /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4209C5C226BD68B70054AAAE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4209C5C326BD68E90054AAAE /* PhoneEntryView.swift */,
+				4209C5CC26BD742B0054AAAE /* PhoneNumTextField.swift */,
+				4209C5D526BD7A520054AAAE /* TapButton.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4209C5C726BD6D3B0054AAAE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4209C5C826BD6D560054AAAE /* PhoneEntryViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4209C5D026BD78D70054AAAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4209C5D126BD79260054AAAE /* StringExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		420A9C9626B99F360038559E = {
@@ -87,6 +124,7 @@
 		420A9CA126B99F370038559E /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				4209C5D026BD78D70054AAAE /* Extensions */,
 				4209C5BA26BD0F880054AAAE /* ViewModels */,
 				420A9CC726BA33400038559E /* Views */,
 				420A9CA226B99F370038559E /* AppDelegate.swift */,
@@ -111,6 +149,7 @@
 		420A9CC726BA33400038559E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4209C5C226BD68B70054AAAE /* Login */,
 				420A9CA626B99F370038559E /* LoginView.swift */,
 				420A9CC426BA33340038559E /* PicturesListView.swift */,
 				420A9CDC26BA83670038559E /* ShowImageView.swift */,
@@ -209,12 +248,17 @@
 			files = (
 				420A9CD826BA483C0038559E /* AddPictureView.swift in Sources */,
 				420A9CA326B99F370038559E /* AppDelegate.swift in Sources */,
+				4209C5D626BD7A520054AAAE /* TapButton.swift in Sources */,
+				4209C5C426BD68E90054AAAE /* PhoneEntryView.swift in Sources */,
 				420A9CC526BA33340038559E /* PicturesListView.swift in Sources */,
 				420A9CE826BAEA5C0038559E /* URLString+CoreDataClass.swift in Sources */,
+				4209C5CD26BD742B0054AAAE /* PhoneNumTextField.swift in Sources */,
 				420A9CF326BB7E9B0038559E /* CustomTextField.swift in Sources */,
 				420A9CDD26BA83670038559E /* ShowImageView.swift in Sources */,
 				420A9CE926BAEA5C0038559E /* URLString+CoreDataProperties.swift in Sources */,
+				4209C5D226BD79260054AAAE /* StringExtensions.swift in Sources */,
 				420A9CAA26B99F370038559E /* TestApp.xcdatamodeld in Sources */,
+				4209C5C926BD6D560054AAAE /* PhoneEntryViewModel.swift in Sources */,
 				4209C5BC26BD10760054AAAE /* LoginViewModel.swift in Sources */,
 				420A9CF626BB82B80038559E /* TimerLabel.swift in Sources */,
 				420A9CA526B99F370038559E /* SceneDelegate.swift in Sources */,
