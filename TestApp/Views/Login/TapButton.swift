@@ -10,11 +10,12 @@ import SwiftUI
 struct TapButton: View {
     
     @State var btnText: String
+    @Binding var disabled: Bool
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(.blue)
+                .foregroundColor(disabled ? .blue : .gray)
                 .frame(height: 56, alignment: .center)
             Text(btnText)
                 .foregroundColor(.white)

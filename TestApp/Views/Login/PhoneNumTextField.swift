@@ -9,9 +9,9 @@ import SwiftUI
 
 struct PhoneNumTextField: View {
     
-    @ObservedObject var vm: PhoneEntryViewModel
+    @ObservedObject var vm: LoginViewModel
     
-    let phoneMask = "(XXX) XXX-XXXX"
+    
     
     var body: some View {
         ZStack() {
@@ -22,7 +22,7 @@ struct PhoneNumTextField: View {
             HStack {
                 Text("+7")
                     .font(.headline)
-                    .padding(.horizontal)
+                    .padding(.leading)
                     .foregroundColor(Color.gray)
                 phoneNumEntry
             }
@@ -31,10 +31,10 @@ struct PhoneNumTextField: View {
     }
     
     var phoneNumEntry: some View {
-        TextField(phoneMask, text: $vm.phone)
+        TextField(vm.phoneMask, text: $vm.phone)
             .keyboardType(.numberPad)
             .onChange(of: vm.phone) { value in
-                vm.phone = vm.phone.format(with: phoneMask)
+                vm.phone = vm.phone.format(with: vm.phoneMask)
             }
     }
 }
