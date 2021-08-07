@@ -42,14 +42,16 @@ class LoginViewModel: ObservableObject {
     
     func checkPhone(){
         if self.phone == "9998887766".format(with: phoneMask) {
-            self.visibleError = nil
-            
-            // По идее для этого нужен отдельный метод, который будет взаимойдействовать с сервером, но на данный момент решил не раздувать код для этого.
-            self.nextPage = true
-            
+            self.isPhoneComplete = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                // По идее для этого нужен отдельный метод, который будет взаимойдействовать с сервером, но на данный момент решил не раздувать код для этого.
+                self.nextPage = true
+                self.visibleError = nil
+                self.isPhoneComplete = true
+            }
         }
         else {
-            visibleError = LoginError.UnknownPhone
+            self.visibleError = LoginError.UnknownPhone
         }
     }
     
@@ -57,10 +59,15 @@ class LoginViewModel: ObservableObject {
         // Тут мы отправляем код подтверждения на сервер
         
         if self.code == "1111" {
-            self.picturesPage = true
-            visibleError = nil
+            isCodeComplete = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.picturesPage = true
+                self.visibleError = nil
+                self.isCodeComplete = true
+                UserDefaults.standard.set(true, forKey: "isLogin")
+            }
         } else {
-            visibleError = LoginError.CodeError
+            self.visibleError = LoginError.CodeError
         }
     }
 }
